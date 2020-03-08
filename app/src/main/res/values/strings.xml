@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Marvel Avengers: All you need to know</string>
+
+    <string name="AdUnitId_sample">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="appId_sample">ca-app-pub-3940256099942544~3347511713</string>
+
+    <string name="AdUnitId">ca-app-pub-5402594136802228/8967731986</string>
+    <string name="appId">ca-app-pub-5402594136802228~2621815489</string>
+</resources>

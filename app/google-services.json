@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "503465700279",
+    "firebase_url": "https://marvel-avengers-info-app.firebaseio.com",
+    "project_id": "marvel-avengers-info-app",
+    "storage_bucket": "marvel-avengers-info-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503465700279:android:de58c604d67e18e8",
+        "android_client_info": {
+          "package_name": "com.manan.admin.marvelavenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503465700279-dg0ppg0ogs3i7e8dlh38seaufu8q4ugd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.manan.admin.marvelavenger",
+            "certificate_hash": "17d8247fae22aedb625fa50a7df4fa0be8d471ec"
+          }
+        },
+        {
+          "client_id": "503465700279-d0gornpg3g07oqliqrle2f1tgsamjrge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPEKghMkAFzJYAA8st_9g6W0Q5LnZX74c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503465700279-d0gornpg3g07oqliqrle2f1tgsamjrge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
