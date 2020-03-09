@@ -1,10 +1,3 @@
-/* Created by Vitruvian @ web and Manan @ android */
-
-/*
-    AVENGERS CHALLENGE
-    CREATED BY: VITRUVIAN
-    APRIL 26, 2018
-*/
 body {
     font-family: 'Audiowide', cursive;
     font-size: 16px;
@@ -40,15 +33,12 @@ input {
     position: relative;
     margin: auto;
     width: 360px;
-    /*height: 460px;*/
 }
 
 #content {
     position: absolute;
     top: 0;
     left: 0;
-    width: 360px;
-    /*height: 460px;*/
     display: none;
 }
 
@@ -240,9 +230,18 @@ input {
     position: absolute;
     top: 46px;
     left: 0;
-    width: 350px;
-    /*height:405px;*/
     padding: 5px;
     overflow: auto;
     font-family: arial, helvetica;
+}
+
+#list {
+    position:relative;
+    top:45px;
+    left:0;
+    width:360px;
+    height:415px;
+    overflow:auto;
+    overflow-x:hidden;
+
 }
