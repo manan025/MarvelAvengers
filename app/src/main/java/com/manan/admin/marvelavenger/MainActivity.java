@@ -1,16 +1,15 @@
 package com.manan.admin.marvelavenger;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,10 +21,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Ads
-        MobileAds.initialize(this, getString(R.string.appId)); // ca-app-pub-5402594136802228~2621815489
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+
+//      MobileAds.initialize(this, getString(R.string.appId_sample));
+//      MobileAds.initialize(this, getString(R.string.appId)); // ca-app-pub-5402594136802228~2621815489
         AdView adView = new AdView(this);
         adView.setAdSize(AdSize.BANNER);
+        // adView.setAdUnitId(getString(R.string.AdUnitId_sample));
         adView.setAdUnitId(getString(R.string.AdUnitId));
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
@@ -39,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //goto previous page when back key is pressed.
-    @Override
+    /*@Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (event.getAction()==KeyEvent.ACTION_DOWN) {
             switch (keyCode) {
@@ -54,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return super.onKeyDown(keyCode, event);
-    }
+    }*/
     /** Called when leaving the activity */
     @Override
     public void onPause() {
