@@ -25,5 +25,7 @@
         app:adSize="BANNER"
         app:adUnitId="@string/AdUnitId" />
 
+    <!-- app:adUnitId="@string/AdUnitId_sample" -->
+
 
 </RelativeLayout>

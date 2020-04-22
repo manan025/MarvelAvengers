@@ -1,14 +1,15 @@
 package com.manan.admin.marvelavenger;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,10 +21,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Ads
-        MobileAds.initialize(this, getString(R.string.appId_sample)); // ca-app-pub-5402594136802228~2621815489
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+
+//      MobileAds.initialize(this, getString(R.string.appId_sample));
+//      MobileAds.initialize(this, getString(R.string.appId)); // ca-app-pub-5402594136802228~2621815489
         AdView adView = new AdView(this);
         adView.setAdSize(AdSize.BANNER);
+        // adView.setAdUnitId(getString(R.string.AdUnitId_sample));
         adView.setAdUnitId(getString(R.string.AdUnitId));
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
